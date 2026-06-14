@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evenson Navilus | Professional Profile</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         .clock-container { display: flex; gap: 20px; align-items: center; justify-content: center; margin-top: 15px; }
         #analog-clock { width: 100px; height: 100px; border: 3px solid #333; border-radius: 50%; position: relative; background: #fff; }
-        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom; background: #333; border-radius: 2px; }
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom; background: #333; }
         .hour-hand { width: 4px; height: 25px; }
         .min-hand { width: 3px; height: 35px; }
         .sec-hand { width: 1.5px; height: 40px; background: red; }
@@ -26,24 +26,26 @@
     <div id="visitor-alert" class="alert alert-info alert-dismissible fade show mb-0 rounded-0" role="alert">
         <div class="container d-flex justify-content-between align-items-center">
             <span id="visitor-message">Loading visitor history...</span>
-            <button type="button" class="btn-close static-position" data-bs-dismiss="alert" aria-label="Close"></button>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Evenson Navilus</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand font-weight-bold" href="#">Evenson Navilus</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link active" href="#">About Me</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="waph.html">WAPH Course</a></li>
                     <li class="nav-item">
-                        <button id="toggle-theme" class="btn btn-outline-light btn-sm ms-2 mt-1 mt-lg-0"><i class="fa-solid fa-moon"></i> Theme</button>
+                        <button id="toggle-theme" class="btn btn-outline-light btn-sm ml-2 mt-1 mt-lg-0"><i class="fa-solid fa-moon"></i> Theme</button>
                     </li>
                 </ul>
             </div>
@@ -53,19 +55,19 @@
     <header class="bg-primary text-white text-center py-5">
         <div class="container">
             <img src="IMG_2742_Original.JPEG" alt="Evenson Navilus" class="rounded-circle img-thumbnail mb-3" style="width: 150px; height: 150px; object-fit: cover;">
-            <h1 class="fw-bold">Evenson Navilus</h1>
+            <h1 class="font-weight-bold">Evenson Navilus</h1>
             <p class="lead">Software Engineer & Electrical Engineering Graduate Student</p>
             
             <div class="mt-3">
-                <span id="email-container" class="me-3">
+                <span id="email-container" class="mr-3">
                     <i class="fa-solid fa-envelope"></i> <span id="user-email" style="display:none;">Lenoirnav@gmail.com</span>
-                    <button id="btn-show-email" class="btn btn-light btn-sm py-0 px-2 ms-1">Show Email</button>
+                    <button id="btn-show-email" class="btn btn-light btn-sm py-0 px-2 ml-1">Show Email</button>
                 </span>
                 <span><i class="fa-solid fa-location-dot"></i> Florence, KY Area</span>
             </div>
 
             <div class="clock-container">
-                <div id="digital-clock" class="badge bg-dark fs-6 py-2 px-3"></div>
+                <div id="digital-clock" class="badge badge-dark p-2" style="font-size: 1rem;"></div>
                 <div id="analog-clock">
                     <div class="hand hour-hand" id="hour-hand"></div>
                     <div class="hand min-hand" id="min-hand"></div>
@@ -80,7 +82,7 @@
             <div class="col-lg-8">
                 <section class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h2 class="card-title text-primary fs-4"><i class="fa-solid fa-user-tie"></i> Professional Summary</h2>
+                        <h2 class="card-title text-primary h4"><i class="fa-solid fa-user-tie"></i> Professional Summary</h2>
                         <hr>
                         <p>Detail-oriented engineer with a strong foundation in Computer Science and Engineering, currently expanding expertise through advanced graduate studies in Electrical Engineering. Proven capability in software engineering, full-stack technologies, system diagnostics, data analysis, and technical leadership.</p>
                     </div>
@@ -88,10 +90,10 @@
 
                 <section id="experience" class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h2 class="card-title text-primary fs-4"><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
+                        <h2 class="card-title text-primary h4"><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
                         <hr>
                         <div class="mb-3">
-                            <h5 class="fw-bold mb-0">Process Assistant & Learning Ambassador</h5>
+                            <h5 class="font-weight-bold mb-0">Process Assistant & Learning Ambassador</h5>
                             <span class="text-muted">Amazon Fulfillment Center | 2023 - Present</span>
                             <ul class="mt-2">
                                 <li>Supervise workflow distribution, operational processes, and team performance metrics.</li>
@@ -103,14 +105,14 @@
 
                 <section id="education" class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h2 class="card-title text-primary fs-4"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+                        <h2 class="card-title text-primary h4"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
                         <hr>
                         <div class="mb-3">
-                            <h5 class="fw-bold mb-0">Master of Engineering in Electrical Engineering</h5>
+                            <h5 class="font-weight-bold mb-0">Master of Engineering in Electrical Engineering</h5>
                             <span class="text-muted">University of Cincinnati | Current Student</span>
                         </div>
                         <div>
-                            <h5 class="fw-bold mb-0">Bachelor of Science in Computer Science & Engineering</h5>
+                            <h5 class="font-weight-bold mb-0">Bachelor of Science in Computer Science & Engineering</h5>
                             <span class="text-muted">University of Cincinnati</span>
                         </div>
                     </div>
@@ -120,26 +122,26 @@
             <div class="col-lg-4">
                 <div class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h4 class="card-title text-primary fs-5"><i class="fa-solid fa-gears"></i> Live API Integrations</h4>
+                        <h4 class="card-title text-primary h5"><i class="fa-solid fa-gears"></i> Live API Integrations</h4>
                         <hr>
                         
                         <div class="alert alert-warning py-1 px-2" style="font-size: 0.75rem;">
                             <strong>Disclaimer:</strong> Content displayed below is fetched dynamically from public third-party services. The site owner is not responsible for generated content.
                         </div>
 
-                        <h6 class="fw-bold mt-3"><i class="fa-solid fa-face-laugh-beam"></i> Joke of the Minute (JokeAPI)</h6>
+                        <h6 class="font-weight-bold mt-3"><i class="fa-solid fa-face-laugh-beam"></i> Joke of the Minute (JokeAPI)</h6>
                         <div id="joke-box" class="api-box text-muted small">Loading fresh joke...</div>
 
-                        <h6 class="fw-bold mt-4"><i class="fa-solid fa-image"></i> Dynamic Graphic (Dog API)</h6>
+                        <h6 class="font-weight-bold mt-4"><i class="fa-solid fa-image"></i> Dynamic Graphic (Dog API)</h6>
                         <div class="text-center mt-2">
-                            <img id="api-image" src="" alt="Dynamic Public Graphic" class="img-fluid rounded border shadow-sm style-placeholder" style="max-height: 200px; min-height: 150px; width: 100%; object-fit: cover;">
+                            <img id="api-image" src="" alt="Dynamic Public Graphic" class="img-fluid rounded border shadow-sm" style="max-height: 200px; min-height: 150px; width: 100%; object-fit: cover;">
                         </div>
                     </div>
                 </div>
 
                 <div class="card mb-4 shadow-sm text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-primary fs-5"><i class="fa-solid fa-chart-line"></i> Traffic Counter</h5>
+                        <h5 class="card-title text-primary h5"><i class="fa-solid fa-chart-line"></i> Traffic Counter</h5>
                         <hr>
                         <div class="mt-2">
                             <a href="https://info.flagcounter.com/XXXX"><img src="https://s11.flagcounter.com/mini/XXXX/bg_FFFFFF/txt_333333/border_CCCCCC/" alt="Flag Counter" border="0"></a>
@@ -158,21 +160,15 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
         $(document).ready(function() {
             
-            // ==========================================
-            // 1. BASIC JAVASCRIPT: DIGITAL & ANALOG CLOCK
-            // ==========================================
             function updateClocks() {
                 const now = new Date();
-                
-                // Digital Clock
                 $('#digital-clock').text(now.toLocaleTimeString());
                 
-                // Analog Clock Math
                 const secs = now.getSeconds();
                 const mins = now.getMinutes();
                 const hours = now.getHours();
@@ -188,9 +184,6 @@
             setInterval(updateClocks, 1000);
             updateClocks();
 
-            // ==========================================
-            // 2. BASIC JAVASCRIPT: SHOW/HIDE EMAIL TOGGLE (jQuery)
-            // ==========================================
             $('#btn-show-email').click(function() {
                 var emailSpan = $('#user-email');
                 if(emailSpan.is(':hidden')) {
@@ -202,17 +195,11 @@
                 }
             });
 
-            // ==========================================
-            // 3. EXTRA ACCESSIBILITY FUNCTIONALITY: THEME SWITCHER
-            // ==========================================
             $('#toggle-theme').click(function() {
                 $('body').toggleClass('dark-mode');
                 $(this).find('i').toggleClass('fa-moon fa-sun');
             });
 
-            // ==========================================
-            // 4. PUBLIC WEB API: JOKEAPI INTEGRATION (1 min loop)
-            // ==========================================
             function fetchJoke() {
                 $.getJSON('https://v2.jokeapi.dev/joke/Any?safe-mode', function(data) {
                     if(data.type === 'single') {
@@ -225,11 +212,8 @@
                 });
             }
             fetchJoke();
-            setInterval(fetchJoke, 60000); // Trigger fetch every 60000ms (1 minute)
+            setInterval(fetchJoke, 60000);
 
-            // ==========================================
-            // 5. PUBLIC WEB API: GRAPHICS API (Dog API)
-            // ==========================================
             function fetchGraphicAPI() {
                 $.getJSON('https://dog.ceo/api/breeds/image/random', function(data) {
                     if(data.status === "success") {
@@ -241,9 +225,6 @@
             }
             fetchGraphicAPI();
 
-            // ==========================================
-            // 6. COOKIES: VISIT TRACKER UTILITY FUNCTIONS
-            // ==========================================
             function setCookie(cname, cvalue, exdays) {
                 const d = new Date();
                 d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -264,7 +245,6 @@
                 return "";
             }
 
-            // Visitor evaluation logic
             const lastVisitKey = "waph_last_visit_time";
             const lastVisitVal = getCookie(lastVisitKey);
             const currentTimeString = new Date().toLocaleString();
